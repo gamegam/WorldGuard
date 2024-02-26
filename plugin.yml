@@ -1,0 +1,9 @@
+name: WorldGuard
+main: gamegam\WorldGuard\Main
+author: gamegam
+version: 0.1
+api: 5.0.0
+
+permissions:
+  worldGuard.permissimon:
+    default: op

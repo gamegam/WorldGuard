@@ -1,0 +1,23 @@
+#en-US:
+
+build: Set block installation and block destruction.
+
+tnt: Whether the surrounding block is destroyed (including the frame)
+
+invincible: It means invincible, except (/kill, physical strength).
+
+lava-flow: Whether to let the lava flow or not
+
+water: Whether to let the water flow or not
+
+use: Whether players can't click when they click anywhere
+
+tnt-Damage: Decide whether to be damaged by the explosion or not
+
+pvp: Determine if you want to prevent players from fighting between them
+
+Mob-damage: It will not be damaged by the mob.
+
+Mob-pvp: Unable to hit all entities except entities (except players)
+
+fire: Players don't burn when they enter the area!

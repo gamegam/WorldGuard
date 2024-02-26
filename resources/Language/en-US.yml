@@ -1,0 +1,68 @@
+---
+ingame: Enter it in the in-game!
+
+help: §c/region [position, define, flag, cancel, info, list, remove, addmembers, removemembers]
+
+isMode: §cYou have already set up a zone. Enter /rg cancel to stop the operation
+
+pos: §dThe first point is to touch the block you want Point two, destroy the block
+
+pos1: "§dYou have selected the first point: ((x):(y):(z))"
+
+pos2: "§dYou have selected a second point: ((x):(y):(z)) Create with /rg define."
+
+null: "§cAn unknown error"
+
+createError1: §cThe world you set up the first time and the world you set up the second time are different. Go ahead in the (world) world!
+
+#definem noname
+notMode: §cSelect the first point and the second point
+
+noname: Please enter your name
+
+isname: (name) already exists.
+
+create: "(name) Added a name: /rg f (name) [flag]"
+
+cancel: Operation cancelled
+
+#Command flag
+f: /rg f [name] [type] allow/deny/none
+
+noType: This type does not exist. You can check it through the /rg list.
+
+fadd: "§eRegion falg (flag) set on 'test' to '(3)'\n§7(Current flags: (flag): (3))"
+
+no3: §cPlease enter alow/deny/none
+
+flagList: "§bFlagList:§r "
+
+#WorldGuard:
+
+BlockBreak: Sorry, but can't break that here
+BlockPreak: Sorry, but can't place that here
+Use: Sorry, but can't Click that here
+pvp: Sorry, but can't PVP that here
+pvpMob: Sorry, but can't't hit an entity that here
+
+#CommmandInfo
+i: Please enter a zone name
+playerlist: §e
+list: "§1§lRegion:§e (region)\n§1§lnFlags:§e (flag)\n§1§lMembers: (members)\n§1§lBoounds:§e ((pos1)) > ((pos2) -World: §r(world)§e)"
+
+noMenvers: §c(none)
+
+#Commandmember
+m: Please enter zone name or nickname
+addm: I added (pp) to (worldguard).
+ism: The player has already been added to the zone.
+remove: (pp) has been deprived of the membership by (name) from (worldguard).
+notremove: This player is not a member of your district.
+
+#CommandRemove
+removeguard: The (worldguard) zone has been removed.
+
+#ListCommand:
+notList: §cNo zones have been created.
+listWorld: "§bWorldGuard §6List:§r (list)"
+...
