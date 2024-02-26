@@ -4,4 +4,4 @@
 Set the zone.
 Click on the first point and block on the second point**
 
-**- /rg defing**
+**- When you have finished setting the position, please enter /rgdefine [zone name]**
