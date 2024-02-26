@@ -10,6 +10,6 @@ Click on the first point and block on the second point**
 
 **- The /rg list brings out possible flags.**
 
-**-allow = allow<br>
+**allow = allow<br>
 deny = Disallow - the player will be unable to interact with the type or the zone.<br>
 none = none**
