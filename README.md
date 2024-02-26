@@ -13,3 +13,5 @@ Click on the first point and block on the second point**
 **allow = allow<br>
 deny = Disallow - the player will be unable to interact with the type or the zone.<br>
 none = none**
+
+**/rg list | View the list of zones you created.**
