@@ -12,5 +12,4 @@ Click on the first point and block on the second point**
 **-
 allow = allow
 deny = Disallow - the player will be unable to interact with the type or the zone.
-none = none
-**
+none = none**
