@@ -15,3 +15,11 @@ deny = Disallow - the player will be unable to interact with the type or the zon
 none = none**
 
 **/rg list | View the list of zones you created.**
+
+**/rg addmembers [zonename] [player] | Add members for the area.**
+
+**/rg removemembers [zonename] [player] | Remove members in the area.**
+
+**/rg remove [zonename] | Remove the area.**
+
+**/rg info [zonebane] | View information for the area.**
