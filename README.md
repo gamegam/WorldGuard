@@ -23,3 +23,6 @@ none = none**
 **/rg remove [zonename] | Remove the area.**
 
 **/rg info [zonebane] | View information for the area.**
+
+# Recommended for use
+**It acts like a local protection.**
