@@ -1,0 +1,9 @@
+name: WorldGuardPlugin
+main: gamegam\WorldGuardPlugin\Main
+author: gamegam
+version: 0.1
+api: 5.0.0
+
+permissions:
+  WorldGuardPlugin.permissimon:
+    default: op
