@@ -16,6 +16,8 @@ tnt-Damage: Decide whether to be damaged by the explosion or not
 
 pvp: Determine if you want to prevent players from fighting between them
 
+chat: You cannot type chat except for an in-zone administrator.
+
 Mob-damage: It will not be damaged by the mob.
 
 Mob-pvp: Unable to hit all entities except entities (except players)
