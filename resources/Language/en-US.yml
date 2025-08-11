@@ -1,0 +1,129 @@
+---
+ingame: Enter it in the in-game!
+
+help: §c/region [position, define, flag, cancel, info, list, remove, addmembers, removemembers, allowblock|all]
+
+isMode: §cYou have already set up a zone. Enter /rg cancel to stop the operation
+
+pos: §dThe first point is to touch the block you want Point two, destroy the block
+
+pos1: "§dYou have selected the first point: ((x):(y):(z))"
+
+pos2: "§dYou have selected a second point: ((x):(y):(z)) Create with /rg define."
+
+null: "§cAn unknown error"
+
+createError1: §cThe world you set up the first time and the world you set up the second time are different. Go ahead in the (world) world!
+
+#definem noname
+notMode: §cSelect the first point and the second point
+
+noname: Please enter your name
+
+isname: (name) already exists.
+notname: "(name) does not exist."
+
+create: "(name) Added a name: /rg f (name) [flag]"
+
+cancel: Operation cancelled
+
+#Command flag
+f: /rg f [name] [type] allow/deny/none
+
+noType: This type does not exist. You can check it through the /rg list.
+
+fadd: "§eRegion flag (flag) set on (name) to '(3)'\n§7(Current flags: (flag): (3))"
+
+no3: §cPlease enter alow/deny/none
+
+flagList: "§bFlagList:§r "
+
+#WorldGuard:
+
+BlockBreak: Sorry, but can't break that here
+BlockPreak: Sorry, but can't place that here
+Use: Sorry, but can't Click that here
+pvp: Sorry, but can't PVP that here
+pvpMob: Sorry, but can't thit an entity that here
+chat: Sorry, but can't thit an Chat that here
+itme-drop: Sorry, but can't thit an Items that here
+tp: Sorry, but can't thit an teleport that here
+
+#CommmandInfo
+i: Please enter a zone name
+playerlist: §e
+list: "§1§lRegion:§e (region)\n§1§lnFlags:§e (flag)\n§1§lMembers: (members)\n§1§lBoounds:§e ((pos1)) > ((pos2) -World: §r(world)§e)"
+
+noMenvers: §c(none)
+
+#Commandmember
+m: Please enter zone name or nickname
+addm: I added (pp) to (worldguard).
+ism: The player has already been added to the zone.
+remove: (pp) has been deprived of the membership by (name) from (worldguard).
+notremove: This player is not a member of your district.
+
+#CommandRemove
+removeguard: The (worldguard) zone has been removed.
+
+#ListCommand:
+notList: §cNo zones have been created.
+listWorld: "§bWorldGuard §6List:§r (list)"
+
+#allowblock
+allblock: "Please hold a block to execute this command."
+region: "Please enter the region name."
+allblock_add: "Added (block) to the (name) region."
+allblock_remove: "Removed (block) from the (name) region."
+allblock_removeno: "Cannot remove (block). Please check if it was added."
+
+wordtp: "Please enter the region name."
+worldtpa: "Moved to the (name) region."
+
+#Form
+form_title: "WorldGuard UI"
+form_content: "This is a simple WorldGuard UI.\n"
+button_1: "Set Coordinates"
+button_2: "Create Region"
+button_3: "Delete Region"
+button_4: "Set Flags"
+button_5: "Region Info"
+button_6: "Add Member"
+button_7: "Member List"
+button_8: block List
+
+info_region: "Please enter the region."
+
+#Remove:
+form_remove_content: "Please select the region to delete."
+
+#remove_check
+form_remove_check: "Are you sure you want to delete (name)?\nIf yes, click the Yes button.\nIf no, select No to go back."
+form_remove_button1: "Yes"
+form_remove_button2: "No"
+
+#flag list
+form_flag_content: "Please select the region to set flags."
+form_flag_set: "Set flags for (name)."
+
+form_flag_message: "Please set the flags"
+form_flag_1: "deny (Not allowed)"
+form_flag_2: "allow (Allowed)"
+form_flag_3: "none (None)"
+
+#input
+form_member_input: "Add a member to the (name) region."
+
+#Member
+form_member_list: "Select the region to view the member list."
+form_member_content: "Click a member to delete them."
+
+#Info
+form_info_button1: "Close"
+form_info_button2: "Back"
+
+form_info_content: "(name) region:\nFlag list: (flag)\nMembers: (member)"
+
+#Block
+form_block_content: "Click this button to delete it."
+...
