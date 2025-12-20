@@ -1,14 +1,37 @@
 # new
 
-WorldGuard Update List Latest
+WorldGuard Update List (Latest)
 
-New Flags Added keep inventory Protects your inventory when you die deny equals protected fly Disables flying except for spectator and creative mode bow Players cannot draw bows in this area ender pearl Players cannot throw ender pearls in this area
+List of Added Flags:
+flag: keep-inventory has been added.
+keep-inventory: Protects your inventory when you die. (deny = protected)
 
-Commands Use worldprotection or wp to manage settings for the entire world
+fly has been added.
+fly: Flying is not allowed. (Spectator mode and Creative mode excluded)
 
-Plugin Integration Now compatible with ScoreHud Use worldguard.regin.name to get the current region name
+bow has been added.
+bow: You cannot pull a bow in this region.
 
-Translation and Bug Fixes Fixed an error where translation files were not added correctly after updates Added real time translation You can edit translations without stopping the server Path plugin data WorldGuardPlugin Language
+ender_pearl has been added.
+ender_pearl: You cannot throw Ender Pearls in this region.
+You can manage an entire specific world using the /worldprotection or /wp command.
 
-Version 3.0.1 Added warning message on off feature Change warn message true to warn message false in config.yml Developer mode has been removed
+Other Plugin Integration:
+Now can be used together with ScoreHud.
+Use worldguard.region.name to get the name of the region you are currently in.
 
+=== Translation Patch & Bug Patch ===
+Fixed an issue where translation files were not properly added after updating the plugin.
+
+Real-time translation has been implemented.
+
+You can edit translations without shutting down the server.
+Path: Translation files are located in plugin_data/WorldGuardPlugin/Language/.
+
+-- 3.0.1 --
+
+Added a warning message on/off feature.
+You must change warn_message: true to warn_message: false in
+plugin_data/WorldGuardPlugin/config.yml.
+
+Developer mode has been removed.
