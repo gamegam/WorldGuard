@@ -1,5 +1,4 @@
 # new
-
 WorldGuard Update List (Latest)
 
 List of Added Flags:
