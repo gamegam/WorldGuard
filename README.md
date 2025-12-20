@@ -20,6 +20,7 @@ Now can be used together with ScoreHud.
 Use worldguard.region.name to get the name of the region you are currently in.
 
 === Translation Patch & Bug Patch ===
+
 Fixed an issue where translation files were not properly added after updating the plugin.
 
 Real-time translation has been implemented.
