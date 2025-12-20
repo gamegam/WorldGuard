@@ -1,28 +1,30 @@
-# Commands
+# new
 
-**- /rg pos
-Set the zone.
-Click on the first point and block on the second point**
+WorldGuard Update List (Latest)
 
-**- When you have finished setting the position, please enter /rgdefine [zone name]**
+Added Flags:
+flag: keep-inventory has been added.
+keep-inventory: Protects your inventory when you die. (deny = protected)
 
-**- /rg flag [zone name] [flag] allow/deny,none Please enter double**
+fly has been added.
+fly: Disables flying in the region. (Spectator mode and Creative mode excluded)
 
-**- The /rg list brings out possible flags.**
+bow has been added.
+bow: Prevents using a bow in the region.
 
-**allow = allow<br>
-deny = Disallow - the player will be unable to interact with the type or the zone.<br>
-none = none**
+ender_pearl has been added.
+ender_pearl: Prevents throwing Ender Pearls in the region.
 
-**/rg list | View the list of zones you created.**
+You can manage an entire world using the /worldprotection or /wp command.
 
-**/rg addmembers [zonename] [player] | Add members for the area.**
+Other Plugin Integration:
+Now compatible with ScoreHud.
+Use worldguard.region.name to get the name of the region you are currently in.
 
-**/rg removemembers [zonename] [player] | Remove members in the area.**
+Translation Patch & Bug Fixes:
+Fixed an issue where translation files were not properly added after updating the plugin.
 
-**/rg remove [zonename] | Remove the area.**
+Real-time translation has been implemented.
+You can edit translations without restarting the server.
+Translation files are located in plugin_data/Language/.
 
-**/rg info [zonebane] | View information for the area.**
-
-# Recommended for use
-**It acts like a local protection.**
