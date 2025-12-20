@@ -5,6 +5,7 @@ namespace gamegam\WorldGuardPlugin\EvnetListener\WorldGuardEvent;
 use gamegam\WorldGuardPlugin\Data\GuarddData;
 use gamegam\WorldGuardPlugin\Data\GuarddFullData;
 use gamegam\WorldGuardPlugin\DataBlock;
+use gamegam\WorldGuardPlugin\Main;
 use gamegam\WorldGuardPlugin\WorldData;
 use gamegam\WorldGuardPlugin\WorldGuard;
 use pocketmine\block\Lava;
@@ -64,7 +65,7 @@ class BlocGuard implements Listener{
 					if(! $guardData->getMembers($name, $p->getName())){
 						// block-allow
 						if (! DataBlock::getInstance()->isBlock($name, $ev->getBlock()->getName())) {
-							$p->sendMessage($this->tag . $this->api->getAPI()->getString("BlockBreak"));
+							Main::getInstance()->message($p, $this->api->getAPI()->getString("BlockBreak"));
 							$ev->cancel();
 						}
 					}
@@ -100,7 +101,7 @@ class BlocGuard implements Listener{
 			if($guard->getBlockJoin($pos)){
 				if($guaraData->getBuild($name)){
 					if(! $guaraData->getMembers($name, $p->getName())){
-						$p->sendMessage($this->tag . $this->api->getAPI()->getString("BlockPreak"));
+						Main::getInstance()->message($p, $this->api->getAPI()->getString("BlockPreak"));
 						$ev->cancel();
 					}
 				}

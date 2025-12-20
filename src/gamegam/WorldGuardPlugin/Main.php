@@ -10,7 +10,6 @@ use gamegam\WorldGuardPlugin\EvnetListener\WorldGuardEvent\Damage;
 use gamegam\WorldGuardPlugin\EvnetListener\WorldGuardEvent\Entity;
 use gamegam\WorldGuardPlugin\EvnetListener\WorldGuardEvent\Player;
 use gamegam\WorldGuardPlugin\Language\LanguageFile;
-use Ifera\ScoreHud\event\PlayerTagsUpdateEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Filesystem;
@@ -44,11 +43,14 @@ class Main extends PluginBase implements Listener{
             $this->worlds = json_decode(Filesystem::fileGetContents($worlds), true);
         }
 
-		$this->abc = new LanguageFile($this);
-		$this->abc->Create_File($this->getConfig()->get("language"), $this->getConfig()->get("Developer_mode"));
-		if ($this->getConfig()->get("Developer_mode")){
-			$this->getServer()->getLogger()->info("§cEnable World Guard Developer Mode");
+		$config = $this->getConfig();
+		if (!$config->exists("warn_message")) {
+			$config->set("warn_message", true);
+			$config->save();
 		}
+
+		$this->abc = new LanguageFile($this);
+		$this->abc->Create_File($this->getConfig()->get("language"));
 
 		$this->getServer()->getCommandMap()->registerAll($this->getName(), [
 			new WorldGuardCommand($this),
@@ -65,13 +67,23 @@ class Main extends PluginBase implements Listener{
 			]
 		);
 
-
 		$this->getScheduler()->scheduleRepeatingTask(new Task(), 0);
+	}
+
+	public function onLoad(): void{
+		self::setInstance($this);
 	}
 
 	public function registerEvnet(array $s){
 		foreach($s as $list){
 			$this->getServer()->getPluginManager()->registerEvents($list, $this);
+		}
+	}
+
+	public function message(\pocketmine\player\Player $player, string $message){
+		// 경고 메시지가 false일경우
+		if ($this->getConfig()->get("warn_message") === true){
+			$player->sendMessage(WorldGuard::getInstance()->getTag(). $message);
 		}
 	}
 

@@ -3,6 +3,5 @@
 Tag: "§cHey!§7 " 
 
 language: en-US
-
-Developer_mode: false
+warn_message: true # If you change this feature to false, no warning message will be output.
 ...

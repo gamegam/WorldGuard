@@ -45,7 +45,8 @@ class Player implements Listener{
 		if ($guard->getBlockJoin($pos)){
 			if ($worlddata->getChat($name)){
 				if(! $p->hasPermission(DefaultPermissions::ROOT_OPERATOR)){
-					$p->sendMessage($this->tag. $this->api->getAPI()->getString("chat"));
+					//$p->sendMessage($this->tag. $this->api->getAPI()->getString("chat"));
+					Main::getInstance()->message($p, $this->api->getAPI()->getString("chat"));
 					$ev->cancel();
 				}
 			}
@@ -56,8 +57,6 @@ class Player implements Listener{
                 $ev->cancel();
             }
         }
-		$p->setFlying(true);
-		$p->setAllowFlight(true);
 	}
 
 	public function onLaunch(ProjectileLaunchEvent $event): void
@@ -72,13 +71,13 @@ class Player implements Listener{
 			$name = $guard->getName($pos);
 			if ($guard->getBlockJoin($pos)){
 				if ($d->getPearl($name)){
-					$p->sendMessage($this->tag. $this->api->getAPI()->getString("ender_pearl"));
+					Main::getInstance()->message($p, $this->api->getAPI()->getString("ender_pearl"));
 					$event->cancel();
 				}
 			}
 			$da = GuarddFullData::getInstance();
 			if ($da->getPearl($p->getWorld()->getFolderName())){
-				$p->sendMessage($this->tag. $this->api->getAPI()->getString("ender_pearl"));
+				Main::getInstance()->message($p, $this->api->getAPI()->getString("ender_pearl"));
 				$event->cancel();
 			}
 		}
@@ -100,7 +99,7 @@ class Player implements Listener{
 						return true;
 					}
 					if(! $d->getMembers($name, $p->getName())){
-						$p->sendMessage($this->tag. $this->api->getAPI()->getString("Use"));;
+						Main::getInstance()->message($p, $this->api->getAPI()->getString("Use"));
 						$ev->cancel();
 					}
 				}
@@ -168,7 +167,7 @@ class Player implements Listener{
 					if ($p->isFlying()) {
 						$p->setAllowFlight(false);
 						$p->setFlying(false);
-						$p->sendMessage($this->tag . $this->api->getAPI()->getString("fly"));
+						Main::getInstance()->message($p, $this->api->getAPI()->getString("fly"));
 					}
 				}
 			}
@@ -179,7 +178,7 @@ class Player implements Listener{
 				if ($p->isFlying()) {
 					$p->setAllowFlight(false);
 					$p->setFlying(false);
-					$p->sendMessage($this->tag . $this->api->getAPI()->getString("fly"));
+					Main::getInstance()->message($p, $this->api->getAPI()->getString("fly"));
 				}
 			}
 		}
@@ -192,14 +191,15 @@ class Player implements Listener{
 			$d = GuarddData::getInstance();
 			if ($guard->getBlockJoin($entity->getPosition())){
 				if ($d->getBow($guard->getName($entity->getPosition()))){
-					$entity->sendMessage($this->tag . $this->api->getAPI()->getString("bow"));
+					Main::getInstance()->message($entity, $this->api->getAPI()->getString("bow"));
 					$event->cancel();
 				}
-			}
-			$da = GuarddFullData::getInstance();
-			if ($da->getBow($entity->getWorld()->getFolderName())){
-				$entity->sendMessage($this->tag . $this->api->getAPI()->getString("bow"));
-				$event->cancel();
+			}else{
+				$da = GuarddFullData::getInstance();
+				if ($da->getBow($entity->getWorld()->getFolderName())){
+					Main::getInstance()->message($entity, $this->api->getAPI()->getString("bow"));
+					$event->cancel();
+				}
 			}
 		}
 	}
@@ -216,7 +216,7 @@ class Player implements Listener{
 			if ($d->getItemDrop($name)){
 				if(! $p->hasPermission(DefaultPermissions::ROOT_OPERATOR)){
 					if(! $d->getMembers($name, $p->getName())){
-						$p->sendMessage($this->tag. $this->api->getAPI()->getString("itme-drop"));;
+						Main::getInstance()->message($p, $this->api->getAPI()->getString("itme-drop"));
 						$ev->cancel();
 					}
 				}
@@ -246,7 +246,7 @@ class Player implements Listener{
 				if ($d->getTP($name)){
 					if(! $p->hasPermission(DefaultPermissions::ROOT_OPERATOR)){
 						if(! $d->getMembers($name, $p->getName())){
-							$p->sendMessage($this->tag. $this->api->getAPI()->getString("tp"));;
+							Main::getInstance()->message($p, $this->api->getAPI()->getString("tp"));
 							$ev->cancel();
 						}
 					}

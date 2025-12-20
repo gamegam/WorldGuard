@@ -78,7 +78,8 @@ class Damage implements Listener{
 			}
 			if (! $entity instanceof Painting && ! $entity instanceof Player && $p instanceof Player){
 				if ($d->getMobPVP($name)){
-					$p->sendMessage($this->tag. $this->api->getAPI()->getString("pvpMob"));
+					//$p->sendMessage($this->tag. $this->api->getAPI()->getString("pvpMob"));
+					Main::getInstance()->message($p, $this->api->getAPI()->getString("pvpMob"));
 					$ev->cancel();
 				}
                 if ($da->getMobPVP($entity->getWorld()->getFolderName())){

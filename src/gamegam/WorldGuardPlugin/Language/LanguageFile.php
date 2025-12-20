@@ -62,7 +62,6 @@ class LanguageFile {
 				$lines = explode("\n", $existingContent);
 
 				foreach ($resourceKeys as $index => $key) {
-					// 기존 파일에 이 키가 없다면?
 					if (!isset($existingData[$key])) {
 						$value = $newData[$key];
 						$escapedValue = str_replace("\n", "\\n", $value);
