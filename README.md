@@ -28,7 +28,6 @@ Real-time translation has been implemented.
 You can edit translations without shutting down the server.
 Path: Translation files are located in plugin_data/WorldGuardPlugin/Language/.
 
--- 3.0.1 --
 Added a warning message on/off feature.
 You must change warn_message: true to warn_message: false in
 plugin_data/WorldGuardPlugin/config.yml.
