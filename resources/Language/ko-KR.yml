@@ -1,0 +1,142 @@
+---
+ingame: 게임 내에서 입력하세요!
+
+help: §c/region [position, define, flag, cancel, info, list, remove, addmembers, removemembers, block|block-allown]
+
+isMode: §c이미 지역을 설정했습니다. 작업을 중지하려면 /rg cancel을 입력하세요.
+
+pos: §d첫 번째 지점은 원하는 블록을 터치하세요. 두 번째 지점은 블록을 파괴하세요.
+
+pos1: "§d첫 번째 지점을 선택했습니다: ((x):(y):(z))"
+
+pos2: "§d두 번째 지점을 선택했습니다: ((x):(y):(z)) /rg define으로 생성하세요."
+
+null: "§c알 수 없는 오류 발생"
+
+createError1: §c처음에 설정한 세계와 두 번째로 설정한 세계가 다릅니다. (world) 세계에서 진행하세요!
+
+#definem noname
+notMode: §c첫 번째 지점과 두 번째 지점을 선택하세요.
+
+noname: 이름을 입력하세요.
+
+isname: (name)은(는) 이미 존재합니다.
+notname: "(name)는(은) 존재하지 않습니다."
+
+create: "(name)이(가) 이름을 추가했습니다: /rg f (name) [flag]"
+
+cancel: 작업이 취소되었습니다.
+
+#Command flag
+f: /rg f [name] [type] allow/deny/none
+
+noType: 이 유형은 존재하지 않습니다. /rg list로 확인할 수 있습니다.
+
+fadd: "§e지역 플래그 (flag)이(가) (name)에 '(3)'으로 설정되었습니다\n§7(현재 플래그: (flag): (3))"
+
+no3: §callow/deny/none 중 하나를 입력하세요.
+
+flagList: "§b플래그 목록:§r "
+
+#WorldGuard:
+
+BlockBreak: 죄송합니다만, 여기서는 그것을 부술 수 없습니다.
+BlockPreak: 죄송합니다만, 여기에는 그것을 놓을 수 없습니다.
+Use: 죄송합니다만, 여기서는 클릭할 수 없습니다.
+pvp: 죄송합니다만, 여기서는 PVP가 허용되지 않습니다.
+pvpMob: 죄송합니다만, 여기서는 엔티티를 공격할 수 없습니다.
+chat: 죄송하지만 여기서는 채팅을 입력할 수 없습니다.
+itme-drop: 죄송하지만 여기서는 아이템을 버릴 수 없습니다.
+tp: 죄송하지만 여기서는 텔레포트를 할 수 없습니다.
+fly: 죄송하지만 여기서는 비행할 수 없습니다.
+bow: 죄송하지만 여기에서는 활을 발사할 수 없습니다.
+ender_pearl: 죄송하지만 여기에서는 엔더진주를 던질 수 없습니다.
+
+#CommmandInfo
+i: 지역 이름을 입력하세요.
+playerlist: §e
+list: "§1§l지역:§e (region)\n§1§l플래그:§e (flag)\n§1§l멤버: (members)\n§1§l위치:§e ((pos1)) > ((pos2) - 월드: §r(world)§e)"
+
+noMenvers: §c(없음)
+
+#Commandmember
+m: 지역 이름 또는 닉네임을 입력하세요.
+addm: (pp)을(를) (worldguard)에 추가했습니다.
+ism: 플레이어는 이미 해당 지역에 추가되었습니다.
+remove: (pp)이(가) (worldguard)에서 (name)에 의해 지역 멤버에서 제거되었습니다
+notremove: 이 플레이어는 해당 지역의 멤버가 아닙니다.
+
+worldtp: "지역 "
+
+#CommandRemove
+removeguard: (worldguard) 지역이 제거되었습니다.
+
+#ListCommand:
+notList: 생성된 지역이 없습니다.
+listWorld: "§bWorldGuard §6목록:§r (list)"
+
+#allowblock
+allblock: "블럭을 들고 실행해 주세요."
+region: "지역을 입력해 주세요."
+allblock_add: "(name) 지역에 (block)을 추가했습니다."
+allblock_remove: "(name) 지역에 (block)을 제거했습니다."
+allblock_removeno: "(block)을 제거 할 수 없습니다. 추가되었는지 확인해 보세요."
+
+wordtp: "지역 이름을 입력하세요."
+worldtpa: "(name)지역으로 이동했습니다."
+
+#Form
+form_title: "월드가드 UI"
+form_content: "월드가드 간편 UI 입니다.\n"
+button_1: "좌표 설정"
+button_2: "지역 생성"
+button_3: "지역 삭제"
+button_4: "플래그 설정"
+button_5: "지역 정보"
+button_6: "맴버 추가"
+button_7: "맴버 목록"
+button_8: 블럭목록
+
+info_region: "지역을 입력해 주세요."
+#Remove:
+form_remove_content: "삭제할 지역을 선택해 주세요."
+#remove_check
+form_remove_check: "정말로 (name)을(를) 삭제 하실건가요?\n삭제을 원하시면 네 버튼을 클릭하세요.\n아니요를 선택시 이전으로 돌아갑니다."
+form_remove_button1: "네"
+form_remove_button2: "아니요"
+#flag list
+form_flag_content: 플래그를 설정할 자역을 선택해 주세요.
+form_flag_set: (name)의 플래그를 설정 합니다.
+
+form_flag_message: "플래그를 설정하세요"
+form_flag_1: "deny (비 허용)"
+form_flag_2: "allow (허용)"
+form_flag_3: "none (없음)"
+
+#input
+form_member_input: (name)지역에 해당 맴버를 추가 합니다.
+
+#Mebmer
+form_member_list: "해당 지역을 선택하여 맴버의 목록을 확인합니다."
+form_member_content: "해당 맴버를 클릭해 삭제 할 수 있습니다."
+
+#Info
+form_info_button1: "닫기"
+form_info_button2: "뒤로"
+
+form_info_content: "(name) 지역:\n플래그 목록: (flag)\n맴버 목록: (member)"
+
+#Block
+form_block_content: "해당 버튼을 클릭시 삭제 됩니다."
+
+#world full
+world_full_help: "§c/wp [create, flag, info, list, remove, addmembers, removemembers, allowblock|all]"
+input_world: "월드 이름을 입력하세요. /wp create [world]"
+is_input_world: "이미 해당 월드는 추가되어있습니다."
+world_add: "(world)월드를 추가했습니다. /wp flag [world] [flag] [allow/deny/none]"
+world_flag_black: "'exit'는 월드 전체에 사용 할 수 없습니다."
+world_not: "(world)월드가 존재하지 않습니다."
+# remove
+world_remove: "(world)월드를 삭제했습니다."
+world_list: "§1§l지역:§e (region)\n§1§l플래그:§e (flag)\n§1§l멤버: (members)\n§1§l월드: §r(world)§e"
+...
