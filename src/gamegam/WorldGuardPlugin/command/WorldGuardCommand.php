@@ -34,7 +34,7 @@ class WorldGuardCommand extends Command implements PluginOwned
             "regin"
         ]);
         $this->api = $api;
-        $this->setPermission(DefaultPermissions::ROOT_OPERATOR);
+		$this->setPermission("WorldGuardPlugin.permissimon");
     }
 
     public function flag(Player $p)

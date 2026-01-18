@@ -5,7 +5,7 @@ namespace gamegam\WorldGuardPlugin;
 use gamegam\WorldGuardPlugin\command\worldFullCommand;
 use gamegam\WorldGuardPlugin\command\WorldGuardCommand;
 use gamegam\WorldGuardPlugin\EvnetListener\Blocks;
-use gamegam\WorldGuardPlugin\EvnetListener\WorldGuardEvent\BlocGuard;
+use gamegam\WorldGuardPlugin\EvnetListener\WorldGuardEvent\BlockGuard;
 use gamegam\WorldGuardPlugin\EvnetListener\WorldGuardEvent\Damage;
 use gamegam\WorldGuardPlugin\EvnetListener\WorldGuardEvent\Entity;
 use gamegam\WorldGuardPlugin\EvnetListener\WorldGuardEvent\Player;
@@ -60,7 +60,7 @@ class Main extends PluginBase implements Listener{
 		$this->registerEvnet([
 			$this,
 			new Blocks($this),
-			new BlocGuard($this),
+			new BlockGuard($this),
 			new Damage($this),
 			new Player($this),
 			new Entity($this)
@@ -74,6 +74,10 @@ class Main extends PluginBase implements Listener{
 		self::setInstance($this);
 	}
 
+	public function isOP(string $name){
+		return $this->getServer()->isOp($name);
+	}
+
 	public function registerEvnet(array $s){
 		foreach($s as $list){
 			$this->getServer()->getPluginManager()->registerEvents($list, $this);
@@ -81,7 +85,6 @@ class Main extends PluginBase implements Listener{
 	}
 
 	public function message(\pocketmine\player\Player $player, string $message){
-		// 경고 메시지가 false일경우
 		if ($this->getConfig()->get("warn_message") === true){
 			$player->sendMessage(WorldGuard::getInstance()->getTag(). $message);
 		}

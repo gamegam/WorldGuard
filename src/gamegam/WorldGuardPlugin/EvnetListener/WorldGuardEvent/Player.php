@@ -44,7 +44,7 @@ class Player implements Listener{
 		$name = $guard->getName($pos);
 		if ($guard->getBlockJoin($pos)){
 			if ($worlddata->getChat($name)){
-				if(! $p->hasPermission(DefaultPermissions::ROOT_OPERATOR)){
+				if (! Main::getInstance()->isOP($p->getName())){
 					//$p->sendMessage($this->tag. $this->api->getAPI()->getString("chat"));
 					Main::getInstance()->message($p, $this->api->getAPI()->getString("chat"));
 					$ev->cancel();
@@ -53,7 +53,7 @@ class Player implements Listener{
 		}
         $da = GuarddFullData::getInstance();
         if ($da->getBuild($p->getWorld()->getFolderName())){
-            if(! $p->hasPermission(DefaultPermissions::ROOT_OPERATOR)){
+			if (! Main::getInstance()->isOP($p->getName())){
                 $ev->cancel();
             }
         }
@@ -144,7 +144,7 @@ class Player implements Listener{
 		// exit
 		if ($guard->getBlockJoin($pos)) {
 			if ($d->getExit($name)) {
-				if (!$p->hasPermission(DefaultPermissions::ROOT_OPERATOR)) {
+				if (! Main::getInstance()->isOP($p->getName())){
 					if (!$d->getMembers($name, $p->getName())) {
 						$this->player[$p->getName()]["exit"] = $name;
 					}
@@ -214,7 +214,7 @@ class Player implements Listener{
 		$name = $data->getName($pos);
 		if ($guard->getBlockJoin($pos)){
 			if ($d->getItemDrop($name)){
-				if(! $p->hasPermission(DefaultPermissions::ROOT_OPERATOR)){
+				if (! Main::getInstance()->isOP($p->getName())){
 					if(! $d->getMembers($name, $p->getName())){
 						Main::getInstance()->message($p, $this->api->getAPI()->getString("itme-drop"));
 						$ev->cancel();
@@ -225,7 +225,7 @@ class Player implements Listener{
 
         $da = GuarddFullData::getInstance();
         if ($da->getItemDrop($p->getWorld()->getFolderName())){
-            if(! $p->hasPermission(DefaultPermissions::ROOT_OPERATOR)){
+			if (! Main::getInstance()->isOP($p->getName())){
                 $ev->cancel();
             }
         }
@@ -244,7 +244,7 @@ class Player implements Listener{
 			$name = $data->getName($pos);
 			if ($guard->getBlockJoin($pos)){
 				if ($d->getTP($name)){
-					if(! $p->hasPermission(DefaultPermissions::ROOT_OPERATOR)){
+					if (! Main::getInstance()->isOP($p->getName())){
 						if(! $d->getMembers($name, $p->getName())){
 							Main::getInstance()->message($p, $this->api->getAPI()->getString("tp"));
 							$ev->cancel();
@@ -255,7 +255,7 @@ class Player implements Listener{
 		}
         $da = GuarddFullData::getInstance();
         if ($da->getTP($p->getWorld()->getFolderName())){
-            if(! $p->hasPermission(DefaultPermissions::ROOT_OPERATOR)){
+			if (! Main::getInstance()->isOP($p->getName())){
                 $ev->cancel();
             }
 		}

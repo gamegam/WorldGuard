@@ -12,7 +12,6 @@ use gamegam\WorldGuardPlugin\WorldData;
 use gamegam\WorldGuardPlugin\WorldGuard;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\permission\DefaultPermissions;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginOwnedTrait;
 
@@ -26,7 +25,7 @@ class worldFullCommand extends Command
         parent::__construct("worldprotection", "Commands that manage a particular world as a whole", null, [
             "wp"
         ]);
-        $this->setPermission(DefaultPermissions::ROOT_OPERATOR);
+        $this->setPermission("WorldGuardPlugin.permissimon");
     }
 
     public function execute(CommandSender $p, string $commandLabel, array $args): void
