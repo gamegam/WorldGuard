@@ -1,7 +1,7 @@
 • I'm still writing it
 ## Command
 | command | Description
-|-----------|--------------|
+|-----------|---------------------|
 |/rg pos | Set the area.
 |/rg define [region] | Creates an area that you set.
 |/rg cancel | Cancel the area you set.
