@@ -12,4 +12,4 @@
 | /rg remove [region] | Remove the area.
 | /rg list | Check the list of regions.
 | /rg block [region] | This specific block can be broke
-| /rg teleport [region] | Teleport to your area.
+| /rg teleport [region] | Teleport to a specific area.
