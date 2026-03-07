@@ -11,5 +11,5 @@
 | /rg removemembers [region] [player] | Remove the members of the area.
 | /rg remove [region] | Remove the area.
 | /rg list | Check the list of regions.
-| /rg block [region] | Set up a destructive block in your area.
+| /rg block [region] | This specific block can be broke
 | /rg teleport [region] | Teleport to your area.
