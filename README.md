@@ -1,4 +1,11 @@
 • I'm still writing it
+## Flags
+| Flag | Description
+|-----------|---------------------|
+| build | Determines whether players can place or break blocks.
+| tnt | Decide on explosion protection. 
+| invincible | Decide whether to play the invincible player.
+
 ## Command
 | command | Description
 |-----------|---------------------|
