@@ -3,8 +3,8 @@
 | Flag | Description
 |-----------|---------------------|
 | build | Determines whether players can place or break blocks.
-| tnt | Decide on explosion protection. 
-| invincible | Decide whether to play the invincible player.
+| tnt | Determines whether explosions are allowed.
+| invincible | Determines whether players are invincible.
 
 ## Command
 | command | Description
