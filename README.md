@@ -7,6 +7,15 @@
 | invincible | Determines whether players are invincible.
 | lava-flow | Determines whether lava can flow.
 | use | Determines whether players can use or interact with objects.
+| water | Determines whether water can flow.
+| tnt-damage | Determines whether players take damage from explosions.
+| pvp | Determines whether players can fight each other.
+| mob-damage | Determines whether mobs can damage players.
+| mob-pvp | Determines whether players can attack mobs.
+| fire | Determines whether players can be on fire.
+| mob-spawn | Determines whether mobs can spawn.
+| chat | Determines whether players can chat. |
+
 
 ## Command
 | command | Description
