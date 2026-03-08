@@ -14,8 +14,11 @@
 | mob-pvp | Determines whether players can attack mobs.
 | fire | Determines whether players can be on fire.
 | mob-spawn | Determines whether mobs can spawn.
-| chat | Determines whether players can chat. |
-
+| chat | Determines whether players can chat.
+| exit | Determines whether players can leave the region.
+| item-drop | Determines whether players can drop items.
+| tp | Determines whether players can teleport in the region.
+| fall-damage | Determines whether players take fall damage. 
 
 ## Command
 | command | Description
