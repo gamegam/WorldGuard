@@ -5,6 +5,7 @@
 | build | Determines whether players can place or break blocks.
 | tnt | Determines whether explosions are allowed.
 | invincible | Determines whether players are invincible.
+| lava-flow | Determines whether lava can flow.
 
 ## Command
 | command | Description
