@@ -6,6 +6,7 @@
 | tnt | Determines whether explosions are allowed.
 | invincible | Determines whether players are invincible.
 | lava-flow | Determines whether lava can flow.
+| use | Determines whether players can use or interact with objects.
 
 ## Command
 | command | Description
