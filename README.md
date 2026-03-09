@@ -19,6 +19,12 @@
 | item-drop | Determines whether players can drop items.
 | tp | Determines whether players can teleport in the region.
 | fall-damage | Determines whether players take fall damage. 
+| falling-block | Determines whether gravity-affected blocks can fall. 
+| keep-inventory | Determines whether players keep their inventory on death. 
+| fly | Determines whether players are allowed to fly when entering the region (Survival and Adventure mode only). 
+| bow | Determines whether players can shoot bows in the region. 
+| ender-pearl | Determines whether players can throw ender pearls in the region. |
+| entry | Determines whether players can enter the region. 
 
 ## Command
 | command | Description
@@ -34,3 +40,5 @@
 | /rg list | Check the list of regions.
 | /rg block [region] | This specific block can be broke
 | /rg teleport [region] | Teleport to a specific area.
+
+#wp command
